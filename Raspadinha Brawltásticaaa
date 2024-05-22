@@ -1,0 +1,38 @@
+import random
+
+def sortear_recompensa():
+    star_drop = ['Raro', 'Super-raro', 'Épico', 'Léndario', 'Mítico', 'Cromático']
+    recompensas = {
+        'Raro': ['100 moedas', '50 Pontos de Poder', '50 blings'],
+        'Super-raro': ['200 moedas', '100 pontos de poder','100 blings'],
+        'Épico': ['Nova reação!!', 'Novo spray!!', 'Novo ícone de jogador!!'],
+        'Léndario': ['Um novo visual raro!!', 'Novo visual super-raro!!!!', 'Novo Visual épico!!'],
+        'Mítico': ['Novo visual Lendárioo!!!!!!', 'VISUAL DE HIPERCARGAAAA!!!', 'Wow, Hipercarga! B)'],
+        'Cromático': ['Novo Brawler', 'Visual lendário', '200 gemas!!!']
+    }
+    while True:
+        try:
+            codigo_secreto = input("Digite RASPAR para ganhar uma recompensa BRAWLTÁSTICAAAAAA!: ")
+            if codigo_secreto == "RASPAR":
+                item_sorteado = random.choice(star_drop)
+                print(f"É um sorteio {item_sorteado}!")
+
+                recompensa_aleatoria = random.choice(recompensas[item_sorteado])
+                print(f"Recompensa: {recompensa_aleatoria}")
+                break
+                
+            elif codigo_secreto.upper() == "N174":
+                print("Recompensa desbloqueada: Você adquiriu a NITA!!,  NITAAAAAAA ʕ•ᴥ•ʔ🌟")
+                break
+            elif codigo_secreto.upper() == "E7PR1M0":
+                print("Recompensa desbloqueada: Você adquiriu o PRIMÃO!!, EEEEEEEEEEEEEEEEEELLLLLLLL PRIMOOOOOOOO ᕙ(◥▶ل͜◀◤)ᕗ ")
+                break
+            elif codigo_secreto.upper() == "C0L7":
+                print("Recompensa desbloqueada: Você adquiriu o COLT, PEW PEW PEW  ̿̿ ̿̿ ̿'̿̿\̵͇̿̿\=(`皿´)=/̵͇̿̿'̿̿/'̿ ̿̿ ̿̿  ")
+                break
+            else:
+                print("Tente escrever RASPAR")
+        except ValueError:
+                print("Ops, palavra errada! Tente escrever RASPAR")
+                 
+sortear_recompensa()
