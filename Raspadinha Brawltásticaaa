@@ -13,7 +13,7 @@ def sortear_recompensa():
     while True:
         try:
             codigo_secreto = input("Digite RASPAR para ganhar uma recompensa BRAWLTÁSTICAAAAAA!: ")
-            if codigo_secreto == "RASPAR":
+            if codigo_secreto.upper() == "RASPAR":
                 item_sorteado = random.choice(star_drop)
                 print(f"É um sorteio {item_sorteado}!")
 
